@@ -1,4 +1,51 @@
 - repo: myusuf3/numbers.vim
 - repo: matthew-brett/vim-rst-sections
-- repo: etdev/vim-hexcolor
 
+- repo: Shougo/denite.nvim
+  on_cmd: Denite
+  trusted: 1
+  hook_source: source ~/.config/nvim/config/plugins/denite.vim
+
+- repo: Shougo/defx.nvim
+  on_cmd: Defx
+  hook_source: source ~/.config/nvim/config/plugins/defx.vim
+
+- repo: deoplete-plugins/deoplete-jedi
+  on_ft: python
+  on_event: InsertEnter
+  hook_source: autocmd MyAutoCmd FileType python setlocal omnifunc=
+
+- repo: carlitux/deoplete-ternjs
+  build: npm install -g tern
+  if: executable('npm')
+  on_event: InsertEnter
+  on_ft: [ javascript, jsx ]
+  hook_source: autocmd MyAutoCmd FileType javascript setlocal omnifunc=
+
+- repo: Shougo/neosnippet.vim
+  depends: [ neosnippet-snippets, context_filetype.vim ]
+  on_event: InsertCharPre
+  on_ft: snippet
+  hook_add: let g:neosnippet#data_directory = g:etc#cache_path . '/snippets'
+  hook_source: |
+    let g:neosnippet#enable_snipmate_compatibility = 1
+    let g:neosnippet#enable_completed_snippet = 1
+    let g:neosnippet#expand_word_boundary = 1
+    let g:neosnippet#enable_complete_done = 1
+    autocmd MyAutoCmd InsertLeave * NeoSnippetClearMarkers
+
+- repo: Shougo/deoplete.nvim
+  depends: context_filetype.vim
+  on_event: InsertEnter
+  hook_source: |
+    source ~/.config/nvim/config/plugins/deoplete.vim
+    call deoplete#enable()
+
+# Disable rafi's plugins
+- { repo: fatih/vim-go, if: 0 }
+- { repo: t9md/vim-choosewin, if: 0 }
+- { repo: lambdalisue/suda.vim, if: 0 }
+- { repo: MattesGroeger/vim-bookmarks, if: 0 }
+- { repo: deoplete-plugins/deoplete-go, if: 0 }
+- { repo: fszymanski/deoplete-emoji, if: 0 }
+- { repo: ludovicchabant/vim-gutentags, if: 0 }
