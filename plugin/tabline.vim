@@ -1,10 +1,7 @@
-" Rafi's Tabline
-" ===
-
 function! Tabline() abort
 	" Active project name
 	let s:tabline =
-		\ '%#TabLineAlt# %{"  " . badge#project()} %#TabLineAltShade#'
+		\ '%#TabLineAlt# %{"♥  " . badge#project()}  %#TabLineAltShade# '
 
 	" Iterate through all tabs and collect labels
 	let l:current = tabpagenr()
@@ -13,9 +10,9 @@ function! Tabline() abort
 		if l:nr == l:current
 			" Active tab
 			let s:tabline .=
-				\ '%#TabLineFill#%#TabLineSel# ' .
+				\ '%#TabLineSel#▓▒ ' .
 				\ '%' . l:nr . 'T%{badge#filename(0, ' . l:nr . ', 1, 1)} ' .
-				\ '%#TabLineFill#'
+				\ '%#TabLineSel#▒▓%#TabLineFill#'
 		else
 			" Normal tab
 			let s:tabline .=

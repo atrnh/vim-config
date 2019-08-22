@@ -28,70 +28,12 @@ hi TabLine     ctermfg=128 ctermbg=128 guifg=#736ee9 guibg=#ffffff cterm=NONE gu
 " TabLineSel: Active tab page label
 hi TabLineSel  ctermfg=230 ctermbg=128 guifg=#ffffff guibg=#e695ff cterm=NONE gui=NONE
 " Custom
-highlight TabLineSelShade  ctermfg=128 ctermbg=128 guifg=#e695ff guibg=#ffffff
-highlight TabLineSelAltShade guifg=#ffffff guibg=#e695ff
 highlight TabLineAlt       ctermfg=230 ctermbg=128 guifg=#6b6b6b guibg=#e7e5ff
 highlight TabLineAltShade  ctermfg=230 ctermbg=128 guifg=#e7e5ff guibg=#ffffff
 
-function! Tabline() abort "{{{
-	" Active project tab
-	let s:tabline =
-		\ '%#TabLineAlt# ♥ %{badge#project()}'.
-		\ '%#TabLineAltShade#▓▒'
-
-	let nr = tabpagenr()
-	for i in range(tabpagenr('$'))
-		if i + 1 == nr
-			" Active tab
-			let s:tabline .=
-				\ '%#TabLineSelAltShade#▓▒%#TabLineSel# '.
-				\ '%'.(i+1).'T%{badge#label('.(i+1).', "│", "✖")} '.
-				\ '%#TabLineSelShade#▓▒%#TabLineFill#'
-		else
-			" Normal tab
-			let s:tabline .=
-				\ '%#TabLineSelShade# '.
-				\ '%'.(i+1).'T%{badge#label('.(i+1).', "│", "✖")} '
-		endif
-	endfor
-	" Empty space and session indicator
-	let s:tabline .=
-		\ '%#TabLineFill#%T%=%#TabLine#%{badge#session("['.fnamemodify(v:this_session, ':t:r').']")}'
-	return s:tabline
-endfunction "}}}
-
-let &tabline='%!Tabline()'
-" }}}
-
-" Statusline {{{
-let s:stl  = " %7*%{&paste ? '=' : ''}%*"         " Paste symbol
-let s:stl .= "%4*%{&readonly ? '' : '◦'}%*"       " Modifide symbol
-let s:stl .= "%6*%{badge#mode('⁈ ', '﹅')}"        " Read-only symbol
-let s:stl .= '%*%n'                               " Buffer number
-let s:stl .= "%6*%{badge#modified('✦')}%0*"       " Write symbol
-let s:stl .= ' %1*%{badge#filename()}%*'          " Filename
-let s:stl .= ' %<'                                " Truncate here
-let s:stl .= '%( %{badge#branch()} %)'           " Git branch name
-let s:stl .= "%4*%(%{badge#trails('⤐ %s')} %)"  " Whitespace
-let s:stl .= '%(%{badge#syntax()} %)%*'           " syntax check
-let s:stl .= '%='                                 " Align to right
-let s:stl .= '%{badge#format()} %4*║%*'           " File format
-let s:stl .= '%( %{&fenc} %)'                     " File encoding
-let s:stl .= '%4*║%*%( %{&ft} %)'                 " File type
-let s:stl .= '%3*▓▒%2* %l/%2c%4p%% '               " Line and column
-let s:stl .= '%{badge#indexing()}%*'              " Indexing tags indicator
-
-" Non-active Statusline {{{
-let s:stl_nc = " %{badge#mode('⁈ ', '﹅')}%n"   " Readonly & buffer
-let s:stl_nc .= "%6*%{badge#modified('✦')}%*"  " Write symbol
-let s:stl_nc .= ' %{badge#filename()}'         " Relative supername
-let s:stl_nc .= '%='                           " Align to right
-let s:stl_nc .= '%{&ft} '                      " File type
-" }}}
-
 " Highlights: Statusline {{{
 highlight StatusLine   ctermfg=15 ctermbg=231 guifg=#ab60e6 guibg=#ffffff
-highlight StatusLineNC ctermfg=14 ctermbg=231 guifg=#e8e8e8 guibg=#fff2dd
+highlight StatusLineNC ctermfg=14 ctermbg=231 guifg=#b8b8d7 guibg=#ffffff
 
 " Filepath color
 highlight User1 guifg=#fc89a1 guibg=#ffffff ctermfg=251 ctermbg=236
@@ -107,24 +49,6 @@ highlight User6 guifg=#36ba75 guibg=#ffffff ctermfg=167 ctermbg=236
 highlight User7 guifg=#a489fc guibg=#ffffff ctermfg=107 ctermbg=236
 " Syntax and whitespace
 highlight User8 guifg=#fd28a2 guibg=#ffffff ctermfg=215 ctermbg=236
-" }}}
-
-let s:disable_statusline =
-	\ 'denite\|defx\|tagbar\|nerdtree\|undotree\|diff\|peekaboo\|sidemenu'
-
-" Toggle Statusline {{{
-augroup statusline
-	autocmd!
-	autocmd FileType,WinEnter,BufWinEnter,BufReadPost *
-		\ if &filetype !~? s:disable_statusline
-		\ | let &l:statusline = s:stl
-		\ | endif
-	autocmd WinLeave *
-		\ if &filetype !~? s:disable_statusline
-		\ | let &l:statusline = s:stl_nc
-		\ | endif
-augroup END "}}}
-
 " }}}
 
 " Highlights: General GUI {{{
