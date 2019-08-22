@@ -36,23 +36,22 @@ highlight TabLineAltShade  ctermfg=230 ctermbg=128 guifg=#e7e5ff guibg=#ffffff
 function! Tabline() abort "{{{
 	" Active project tab
 	let s:tabline =
-		\ '%#TabLineAlt# %{badge#project()}  '.
-		\ '%#TabLineAltShade#▓▒░'.
-		\ '%#TabLineFill#♥'
+		\ '%#TabLineAlt# ♥ %{badge#project()}'.
+		\ '%#TabLineAltShade#▓▒'
 
 	let nr = tabpagenr()
 	for i in range(tabpagenr('$'))
 		if i + 1 == nr
 			" Active tab
 			let s:tabline .=
-				\ '%#TabLineSelAltShade#%#TabLineSel#  '.
-				\ '%'.(i+1).'T%{badge#label('.(i+1).', "▒", "✖")}  '.
-				\ '%#TabLineSelShade#%#TabLineFill#'
+				\ '%#TabLineSelAltShade#▓▒%#TabLineSel# '.
+				\ '%'.(i+1).'T%{badge#label('.(i+1).', "│", "✖")} '.
+				\ '%#TabLineSelShade#▓▒%#TabLineFill#'
 		else
 			" Normal tab
 			let s:tabline .=
-				\ '%#TabLine#   '.
-				\ '%'.(i+1).'T%{badge#label('.(i+1).', "▒", "✖")} '
+				\ '%#TabLineSelShade# '.
+				\ '%'.(i+1).'T%{badge#label('.(i+1).', "│", "✖")} '
 		endif
 	endfor
 	" Empty space and session indicator
