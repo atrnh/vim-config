@@ -1,23 +1,7 @@
-
-" rafi-2017 - hybrid custom
-" =========================
-
-" gVim Appearance {{{
-" ---------------------------------------------------------
-if has('gui_running')
-	set guifont=PragmataPro:h16
-	" set noantialias
-endif
-" }}}
-
-" UI elements {{{
-" ---------------------------------------------------------
+" Whitespace
 set showbreak=↪
 set fillchars=vert:│,fold:─
 set listchars=tab:\▏\ ,extends:⟫,precedes:⟪,nbsp:␣,trail:·
-
-" icons:  ▏│ ¦ ╎ ┆ ⋮ ⦙ ┊ 
-" }}}
 
 " Tabline {{{
 " ---------------------------------------------------------
@@ -32,23 +16,23 @@ highlight TabLineAlt       ctermfg=230 ctermbg=128 guifg=#6b6b6b guibg=#e7e5ff
 highlight TabLineAltShade  ctermfg=230 ctermbg=128 guifg=#e7e5ff guibg=#ffffff
 
 " Highlights: Statusline {{{
-highlight StatusLine   ctermfg=15 ctermbg=231 guifg=#ab60e6 guibg=#ffffff
-highlight StatusLineNC ctermfg=14 ctermbg=231 guifg=#b8b8d7 guibg=#ffffff
+highlight StatusLine   ctermfg=15 ctermbg=231 guifg=#6b6b6b guibg=#e7e5ff
+highlight StatusLineNC ctermfg=14 ctermbg=231 guifg=#6b6b6b guibg=#ffffff
 
 " Filepath color
-highlight User1 guifg=#fc89a1 guibg=#ffffff ctermfg=251 ctermbg=236
+highlight User1 guifg=#161464 guibg=#e7e5ff ctermfg=251 ctermbg=236
 " Line and column information
-highlight User2 guifg=#402d99 guibg=#fbfbfb ctermfg=248 ctermbg=239
+highlight User2 guifg=#402d99 guibg=#e7e5ff ctermfg=248 ctermbg=239
 " Line and column corner arrow
-highlight User3 guifg=#fbfbfb guibg=#ffffff ctermfg=239 ctermbg=236
+highlight User3 guifg=#fbfbfb guibg=#e7e5ff ctermfg=239 ctermbg=236
 " Buffer # symbol and whitespace or syntax errors
-highlight User4 guifg=#e22b75 guibg=#ffffff ctermfg=242 ctermbg=236
+highlight User4 guifg=#ffffff guibg=#e7e5ff ctermfg=242 ctermbg=236
 " Write symbol
-highlight User6 guifg=#36ba75 guibg=#ffffff ctermfg=167 ctermbg=236
+highlight User6 guifg=#36ba75 guibg=#e7e5ff ctermfg=167 ctermbg=236
 " Paste symbol
-highlight User7 guifg=#a489fc guibg=#ffffff ctermfg=107 ctermbg=236
+highlight User7 guifg=#a489fc guibg=#e7e5ff ctermfg=107 ctermbg=236
 " Syntax and whitespace
-highlight User8 guifg=#fd28a2 guibg=#ffffff ctermfg=215 ctermbg=236
+highlight User8 guifg=#fd28a2 guibg=#e7e5ff ctermfg=215 ctermbg=236
 " }}}
 
 " Highlights: General GUI {{{
@@ -64,16 +48,17 @@ highlight! link ExtraWhitespace  SpellBad
 
 " Plugin: Defx icons and highlights {{{
 " ---------------------------------------------------------
-" let g:defx_git#indicators = {
-"	\ 'Modified'  : '•',
-"	\ 'Staged'    : '✚',
-"	\ 'Untracked' : 'ᵁ',
-"	\ 'Renamed'   : '≫',
-"	\ 'Unmerged'  : '≠',
-"	\ 'Ignored'   : 'ⁱ',
-"	\ 'Deleted'   : '✖',
-"	\ 'Unknown'   : '⁇'
-"	\ }
+let g:defx_git#indicators = {
+	\ 'Modified'  : '★',
+	\ 'Staged'    : '﹢',
+	\ 'Untracked' : '⚬',
+	\ 'Renamed'   : '≫',
+	\ 'Unmerged'  : '≠',
+	\ 'Ignored'   : '⊘',
+	\ 'Deleted'   : '×',
+	\ 'Unknown'   : '⁇'
+	\ }
+
 "
 " highlight Defx_filename_3_Modified  ctermfg=1  guifg=#D370A3
 " highlight Defx_filename_3_Staged    ctermfg=10 guifg=#A3D572
