@@ -49,3 +49,5 @@
 - { repo: deoplete-plugins/deoplete-go, if: 0 }
 - { repo: fszymanski/deoplete-emoji, if: 0 }
 - { repo: ludovicchabant/vim-gutentags, if: 0 }
+- { repo: itchyny/calendar.vim, if: 0 }
+- { repo: t9md/vim-choosewin, if: 0 }

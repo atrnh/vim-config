@@ -3,7 +3,7 @@
 " ----
 
 call defx#custom#option('_', {
-	\ 'columns': 'indent:git:icons:filename',
+	\ 'columns': 'indent:git:filename',
 	\ 'winwidth': 25,
 	\ 'split': 'vertical',
 	\ 'direction': 'topleft',
