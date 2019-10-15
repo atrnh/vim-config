@@ -214,11 +214,11 @@ if dein#tap('tern_for_vim')
 endif
 
 if dein#tap('vim-gitgutter')
-	nmap <Leader>hj <Plug>GitGutterNextHunk
-	nmap <Leader>hk <Plug>GitGutterPrevHunk
-	nmap <Leader>hs <Plug>GitGutterStageHunk
-	nmap <Leader>hr <Plug>GitGutterUndoHunk
-	nmap <Leader>hp <Plug>GitGutterPreviewHunk
+	nmap <Leader>hj <Plug>(GitGutterNextHunk)
+	nmap <Leader>hk <Plug>(GitGutterPrevHunk)
+	nmap <Leader>hs <Plug>(GitGutterStageHunk)
+	nmap <Leader>hr <Plug>(GitGutterUndoHunk)
+	nmap <Leader>hp <Plug>(GitGutterPreviewHunk)
 endif
 
 if dein#tap('vim-go')
@@ -249,7 +249,7 @@ endif
 if dein#tap('vim-easygit')
 	nnoremap <silent> <leader>gd :Gdiff<CR>
 	nnoremap <silent> <leader>gD :Gdiffoff<CR>
-	nnoremap <silent> <leader>gc :Gcommit<CR>
+	nnoremap <silent> <leader>gc :exe 'Gcommit' . expand('%:p')<CR>
 	nnoremap <silent> <leader>gb :Gblame<CR>
 	nnoremap <silent> <leader>gB :Gbrowse<CR>
 	nnoremap <silent> <leader>gS :Gstatus<CR>

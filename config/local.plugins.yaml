@@ -15,6 +15,9 @@
   on_event: InsertEnter
   hook_source: autocmd MyAutoCmd FileType python setlocal omnifunc=
 
+- repo: dhruvasagar/vim-table-mode
+  on_ft: rst
+
 - repo: carlitux/deoplete-ternjs
   build: npm install -g tern
   if: executable('npm')
@@ -41,6 +44,35 @@
     source ~/.config/nvim/config/plugins/deoplete.vim
     call deoplete#enable()
 
+- repo: nathanaelkane/vim-indent-guides
+  on_cmd: [ IndentGuidesEnable, IndentGuidesDisable, IndentGuidesToggle ]
+  hook_post_source: |
+    call indent_guides#init_script_vars()
+    hi IndentGuidesOdd guibg=#f6f5ff
+    hi IndentGuidesEven guibg=#f4f2fb
+    call indent_guides#highlight_colors()
+  hook_add: |
+    let g:indent_guides_color_change_percent = 3
+    let g:indent_guides_autocmds_enabled = 0
+    let g:indent_guides_default_mapping = 0
+    let g:indent_guides_guide_size = 1
+    let g:indent_guides_indent_levels = 25
+    let g:indent_exclude = [ 'help', 'denite', 'codi' ]
+    augroup user_plugin_indentguides
+      autocmd!
+      autocmd BufEnter *
+      \ if ! empty(&l:filetype) && index(g:indent_exclude, &l:filetype) == -1
+      \|   if g:indent_guides_autocmds_enabled == 0 && &l:expandtab
+      \|     IndentGuidesEnable
+      \|   elseif g:indent_guides_autocmds_enabled == 1 && ! &l:expandtab
+      \|     IndentGuidesDisable
+      \|   endif
+      \| endif
+    augroup END
+    if ! has('vim_starting')
+      doautocmd <nomodeline> user_plugin_indentguides BufEnter
+    endif
+
 # Disable rafi's plugins
 - { repo: fatih/vim-go, if: 0 }
 - { repo: t9md/vim-choosewin, if: 0 }
@@ -51,3 +83,4 @@
 - { repo: ludovicchabant/vim-gutentags, if: 0 }
 - { repo: itchyny/calendar.vim, if: 0 }
 - { repo: t9md/vim-choosewin, if: 0 }
+- { repo: benekastah/neomake, if: 0 }
