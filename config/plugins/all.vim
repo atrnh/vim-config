@@ -249,7 +249,7 @@ endif
 if dein#tap('vim-easygit')
 	nnoremap <silent> <leader>gd :Gdiff<CR>
 	nnoremap <silent> <leader>gD :Gdiffoff<CR>
-	nnoremap <silent> <leader>gc :exe 'Gcommit' . expand('%:p')<CR>
+	nnoremap <silent> <leader>gc :Gcommit -v<CR>
 	nnoremap <silent> <leader>gb :Gblame<CR>
 	nnoremap <silent> <leader>gB :Gbrowse<CR>
 	nnoremap <silent> <leader>gS :Gstatus<CR>

@@ -299,12 +299,18 @@ endfunction "}}}
 " s: Windows and buffers {{{
 
 nnoremap <silent> [Window]v  :<C-u>split<CR>
+
 nnoremap <silent> [Window]g  :<C-u>vsplit<CR>
 nnoremap <silent> [Window]t  :tabnew<CR>
 nnoremap <silent> [Window]o  :<C-u>only<CR>
 nnoremap <silent> [Window]b  :b#<CR>
 nnoremap <silent> [Window]c  :close<CR>
+
 nnoremap <silent> [Window]x  :<C-u>call <SID>BufferEmpty()<CR>
+nnoremap <silent> [Window]sk  :wincmd k<CR>
+nnoremap <silent> [Window]sl  :wincmd l<CR>
+nnoremap <silent> [Window]sh  :wincmd h<CR>
+nnoremap <silent> [Window]sj  :wincmd j<CR>
 
 " Split current buffer, go to previous window and previous buffer
 nnoremap <silent> [Window]sv :split<CR>:wincmd p<CR>:e#<CR>

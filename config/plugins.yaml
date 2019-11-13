@@ -166,7 +166,7 @@
 # --------
 - repo: Shougo/defx.nvim
   on_cmd: Defx
-  hook_source: source ~/.config/nvim/config/plugins/defx.vim
+  hook_source: source $VIMPATH/config/plugins/defx.vim
 
 - { repo: kristijanhusak/defx-git, on_source: defx.nvim }
 - { repo: kristijanhusak/defx-icons, on_source: defx.nvim }
@@ -305,13 +305,13 @@
   on_event: [ BufWritePre ]
   on_cmd: [ Neomake, NeomakeFile, NeomakeEnable, NeomakeToggle, NeomakeInfo ]
   hook_source: |
-    source $VIM_PATH/config/plugins/neomake.vim
-    call neomake#configure#automake('nrw')
+    source $VIMPATH/config/plugins/neomake.vim
+    call neomake#configure#automake('rw')
 
 - repo: junegunn/goyo.vim
   depends: limelight.vim
   on_cmd: Goyo
-  hook_source: source $VIM_PATH/config/plugins/goyo.vim
+  hook_source: source $VIMPATH/config/plugins/goyo.vim
 
 - repo: junegunn/limelight.vim
   on_cmd: Limelight
@@ -350,13 +350,13 @@
 #- repo: neoclide/coc.nvim
 #  merge: 0
 #  rev: release
-#  hook_source: source $VIM_PATH/config/plugins/coc.vim
+#  hook_source: source $VIMPATH/config/plugins/coc.vim
 
 - repo: Shougo/deoplete.nvim
   depends: context_filetype.vim
   on_event: InsertEnter
   hook_source: |
-    source ~/.config/nvim/config/plugins/deoplete.vim
+    source $VIMPATH/config/plugins/deoplete.vim
     call deoplete#enable()
 
 - repo: deoplete-plugins/deoplete-go
@@ -477,7 +477,7 @@
 - repo: Shougo/denite.nvim
   on_cmd: Denite
   trusted: 1
-  hook_source: source ~/.config/nvim/config/plugins/denite.vim
+  hook_source: source $VIMPATH/config/plugins/denite.vim
 
 - { repo: Shougo/neoyank.vim, on_source: denite.nvim, on_event: TextYankPost }
 - { repo: Shougo/junkfile.vim, on_source: denite.nvim }

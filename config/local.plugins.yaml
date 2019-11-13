@@ -84,3 +84,4 @@
 - { repo: itchyny/calendar.vim, if: 0 }
 - { repo: t9md/vim-choosewin, if: 0 }
 - { repo: benekastah/neomake, if: 0 }
+- { repo: christoomey/vim-tmux-navigator, if: 0 }
