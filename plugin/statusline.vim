@@ -1,6 +1,7 @@
 " Statusline
 " ===
 "
+
 let s:stl  = " %4*%{&paste ? '=' : ''}%*"         " Paste symbol
 let s:stl .= "%3*%{&readonly ? '' : '●'}%*"       " Modifide symbol
 let s:stl .= "%3*%{badge#mode('⁈', '')}"        " Read-only symbol
@@ -50,7 +51,7 @@ augroup user_statusline
 	" autocmd FileReadPre,ShellCmdPost,FileWritePost * call s:refresh()
 	autocmd User CocStatusChange,CocGitStatusChange call s:refresh()
 	autocmd User CocDiagnosticChange call s:refresh()
-	" autocmd User GutentagsUpdating call s:refresh()
+	autocmd User GutentagsUpdating call s:refresh()
 augroup END
 
 " }}}
