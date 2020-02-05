@@ -1,5 +1,8 @@
 - repo: myusuf3/numbers.vim
 - repo: matthew-brett/vim-rst-sections
+  on_ft: rst
+
+- repo: elixir-editors/vim-elixir
 
 - repo: Shougo/denite.nvim
   on_cmd: Denite
