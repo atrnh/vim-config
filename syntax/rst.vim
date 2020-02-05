@@ -89,7 +89,8 @@ call s:DefineRegion({
 	\'end': '"^\s\@!"',
 	\'opts': {
 	\    'contains': 'rstExDirectiveArgs,@rstDirectives',
-	\    'nextgroup': '@rstDirectives'
+	\    'nextgroup': '@rstDirectives',
+	\    'keepend': 'keepend'
 	\    }
 	\})
 
@@ -101,7 +102,8 @@ call s:DefineRegion({
 	\'opts': {
 	\    'contains': 'rstExDirectiveArgs,@rstDirectives',
 	\    'contained': 'contained',
-	\    'nextgroup': '@rstDirectives'
+	\    'nextgroup': '@rstDirectives',
+	\    'keepend': 'keepend'
 	\    }
 	\})
 
