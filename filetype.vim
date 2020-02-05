@@ -31,6 +31,10 @@ augroup filetypedetect
 	autocmd BufNewFile,BufRead Tmuxfile,tmux/config setfiletype tmux
 	autocmd BufNewFile,BufRead Brewfile             setfiletype ruby
 
+	autocmd BufNewFile,BufRead *.exs setfiletype elixir
+	autocmd BufNewFile,BufRead *.html setfiletype htmldjango
+	autocmd BufNewFile,BufRead *.md setfiletype markdown
+
 augroup END
 
 " vim: set ts=2 sw=2 tw=80 noet :
