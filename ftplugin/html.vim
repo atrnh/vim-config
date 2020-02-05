@@ -1,2 +1,2 @@
-setlocal shiftwidth=2
-setlocal expandtab
+set shiftwidth=2
+set expandtab

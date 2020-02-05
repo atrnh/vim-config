@@ -1,14 +1,14 @@
-setlocal foldmethod=indent
-setlocal tabstop=2
-setlocal softtabstop=2
-setlocal shiftwidth=2
-setlocal textwidth=80
-setlocal expandtab
-setlocal smarttab
-setlocal nosmartindent
+set foldmethod=indent
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set textwidth=80
+set expandtab
+set nosmartindent
+set wrap
 
 let g:rst_syntax_code_list = {
-	\ 'vim': ['vim'],
+  \ 'vim': ['vim'],
   \ 'java': ['java'],
   \ 'cpp': ['cpp', 'c++'],
   \ 'lisp': ['lisp'],
@@ -16,7 +16,7 @@ let g:rst_syntax_code_list = {
   \ 'python': ['python'],
   \ 'perl': ['perl'],
   \ 'sh': ['sh'],
-	\ 'javascript': ['javascript', 'jsx'],
+  \ 'javascript': ['javascript', 'jsx'],
   \ }
 let g:table_mode_corner_corner = '+'
 let g:table_mode_header_fillchar = '='
