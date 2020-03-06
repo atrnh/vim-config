@@ -133,11 +133,5 @@ for group in s:colorgroups
   let guifg = has_key(group, 'guifg') ? s:colors[group['guifg']] : 'NONE'
   let guibg = has_key(group, 'guibg') ? s:colors[group['guibg']] : 'NONE'
 
-  " let cterm = has_key(group, 'cterm') ? group['cterm'] : 'NONE'
-  " let ctermfg = has_key(group, 'ctermfg') ? s:colors[group['ctermfg']] : 'NONE'
-  " let ctermbg = has_key(group, 'ctermbg') ? s:colors[group['ctermbg']] : 'NONE'
-
-  execute 'hi '.group['group'].' gui='.gui.' guifg='.guifg.' guibg='.guibg
+  execute 'highlight! '.group['group'].' gui='.gui.' guifg='.guifg.' guibg='.guibg
 endfor
-
-

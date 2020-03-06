@@ -80,14 +80,6 @@ let g:gitgutter_sign_removed_first_line = '▔'
 let g:gitgutter_sign_modified_removed = '▋'
 "}}}
 
-" Plugin: vim-gitgutter {{{
-" ---------------------------------------------------------
-highlight! GitGutterAdd ctermfg=22 guifg=#84edb8 ctermbg=NONE guibg=NONE
-highlight! GitGutterChange ctermfg=58 guifg=#d9b0fc ctermbg=NONE guibg=NONE
-highlight! GitGutterDelete ctermfg=52 guifg=#f79c7e ctermbg=NONE guibg=NONE
-highlight! GitGutterChangeDelete ctermfg=52 guifg=#87c7ed ctermbg=NONE guibg=NONE
-" }}}
-
 " Plugin: denite {{{
 " ---------------------------------------------------------
 highlight! clear WildMenu

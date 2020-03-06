@@ -177,7 +177,8 @@ endfor
 
 syn sync minlines=50 linebreaks=2
 
-hi link rstDirective Normal
+hi rstDirective guifg=black
+hi rstExDirective guifg=black
 
 " hi def link rstDirectiveStart Keyword
 hi def link rstExArg Identifier

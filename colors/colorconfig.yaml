@@ -32,9 +32,13 @@ colors:
   white_bright: '#9b61e8'
   ui_bg: '#e7e5ff'
   filepath: '#161464'
+  gitadd: '#84edb8'
+  gitchange: '#d9b0fc'
+  gitdelete: '#f79c7e'
+  gitchangedelete: '#87c7ed'
 
 colorgroups:
-  - { group: 'Normal', guifg: 'black', guibg: 'cloud' }
+  - { group: 'Normal', guifg: 'coal', guibg: 'cloud' }
   - { group: 'Darker', guifg: 'coal', guibg: 'rain_cloud' }
   - { group: 'ColorColumn', guifg: 'snow', guibg: 'ui_bg' }
   - { group: 'Conceal', guifg: 'yellow_bright', gui: 'bold' }
@@ -58,20 +62,20 @@ colorgroups:
   - { group: 'Title', guifg: 'magenta', gui: 'bold' }
   - { group: 'Todo', guifg: 'yellow', guibg: 'cream' }
   - { group: 'VertSplit', guifg: 'cloud', guibg: 'cloud' }
-  - { group: 'Visual', guifg: 'black', guibg: 'cyan_bright' }
+  - { group: 'Visual', guifg: 'black', guibg: 'cream' }
   - { group: 'WarningMsg', guifg: 'red', guibg: 'snow' }
   - { group: 'Access', guifg: 'white_bright', gui: 'bold' }
   - { group: 'Comment', guifg: 'grape', gui: 'italic' }
   - { group: 'Class', guifg: 'magenta', gui: 'italic' }
   - { group: 'Conditional', guifg: 'blue' }
-  - { group: 'Constant', guifg: 'yellow', gui: 'bold' }
-  - { group: 'Delimiter', guifg: 'magenta' }
-  - { group: 'Function', guifg: 'magenta_bright' }
+  - { group: 'Constant', guifg: 'white', gui: 'bold' }
+  - { group: 'Delimiter', guifg: 'navy' }
+  - { group: 'Function', guifg: 'black' }
   - { group: 'Identifier', guifg: 'white' }
   - { group: 'Module', guifg: 'magenta', gui: 'underline' }
   - { group: 'NonText', guifg: 'rain_cloud' }
   - { group: 'Number', guifg: 'magenta_bright' }
-  - { group: 'PreProc', guifg: 'yellow' }
+  - { group: 'PreProc', guifg: 'navy' }
   - { group: 'Statement', guifg: 'magenta' }
   - { group: 'Special', guifg: 'red' }
   - { group: 'SpecialKey', guifg: 'yellow' }
@@ -90,4 +94,8 @@ colorgroups:
   - { group: 'User2', guifg: 'snow', guibg: 'ui_bg' }
   - { group: 'User3', guifg: 'mint', guibg: 'ui_bg' }
   - { group: 'User4', guifg: 'black_bright', guibg: 'ui_bg' }
-
+  - { group: 'GitGutterAdd', guifg: 'gitadd' }
+  - { group: 'GitGutterChange', guifg: 'gitchange' }
+  - { group: 'GitGutterDelete', guifg: 'gitdelete' }
+  - { group: 'MatchParen', guibg: 'cream' }
+  - { group: 'ParenMatch', guibg: 'cream' }
