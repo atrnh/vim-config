@@ -50,7 +50,6 @@ colorgroups:
   - { group: 'ErrorMsg', guifg: 'red', guibg: 'cloud' }
   - { group: 'FoldColumn', guibg: 'grape' }
   - { group: 'Folded', guifg: 'cloud', guibg: 'grape' }
-  - { group: 'LineNr', guifg: 'cyan', guibg: 'cloud' }
   - { group: 'LineNr', guifg: 'black_bright', guibg: 'cloud' }
   - { group: 'MatchParen', guifg: 'cloud', guibg: 'magenta' }
   - { group: 'ModeMsg', guifg: 'cloud', guibg: 'green' }
@@ -65,7 +64,7 @@ colorgroups:
   - { group: 'Visual', guifg: 'black', guibg: 'cream' }
   - { group: 'WarningMsg', guifg: 'red', guibg: 'snow' }
   - { group: 'Access', guifg: 'white_bright', gui: 'bold' }
-  - { group: 'Comment', guifg: 'grape', gui: 'italic' }
+  - { group: 'Comment', guifg: 'black_bright', gui: 'italic' }
   - { group: 'Class', guifg: 'magenta', gui: 'italic' }
   - { group: 'Conditional', guifg: 'blue' }
   - { group: 'Constant', guifg: 'white', gui: 'bold' }
