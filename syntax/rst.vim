@@ -10,7 +10,7 @@ let s:sw = shiftwidth()
 syn match rstTransition /^[=`:.'"~^_*+#-]\{4,}\s*$/
 
 syn cluster rstDirectives contains=rstDirective,rstSections,rstExDirective
-syn cluster rstCruft contains=rstEmphasis,rstStrongEmphasis,
+syn cluster rstCruft contains=rstEmphasis,rstStrong,rstStrongEmphasis,
 	\ rstInterpretedText,rstInlineLiteral,rstSubstitutionReference,
 	\ rstInlineInternalTargets,rstFootnoteReference,rstHyperlinkReference,
 	\ rstCitationReference,rstCitation,rstInterpretedTextOrHyperlinkReference,
@@ -52,7 +52,8 @@ function! s:DefineInlineMarkup(name, start, middle, end)
 endfunction
 
 call s:DefineInlineMarkup('Emphasis', '\*', '\*', '\*')
-call s:DefineInlineMarkup('StrongEmphasis', '\*\*', '\*', '\*\*')
+call s:DefineInlineMarkup('Strong', '\*\*', '\*', '\*\*')
+call s:DefineInlineMarkup('StrongEmphasis', '\*\*\*', '\*', '\*\*\*')
 call s:DefineInlineMarkup('InterpretedTextOrHyperlinkReference', '`', '`', '`_\{0,2}')
 call s:DefineInlineMarkup('InlineLiteral', '``', "", '``')
 call s:DefineInlineMarkup('SubstitutionReference', '|', '|', '|_\{0,2}')
@@ -177,8 +178,8 @@ endfor
 
 syn sync minlines=50 linebreaks=2
 
-hi rstDirective guifg=black
-hi rstExDirective guifg=black
+hi rstDirective guifg=#e6f3ff
+hi rstExDirective guifg=#e6f3ff
 
 " hi def link rstDirectiveStart Keyword
 hi def link rstExArg Identifier
