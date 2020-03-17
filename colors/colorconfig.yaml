@@ -52,45 +52,45 @@ colorgroups:
   - { group: 'Conceal', guifg: 'yellow_bright', gui: 'bold' }
   - { group: 'Cursor', guifg: 'black', guibg: 'ui_bg' }
   - { group: 'CursorLine', guifg: 'truewhite', guibg: 'cream', gui: 'bold' }
-  - { group: 'CursorLineNr', guifg: 'white_bright', guibg: 'cloud' }
-  - { group: 'Directory', guifg: 'navy', guibg: 'cloud' }
-  - { group: 'Error', guifg: 'red', guibg: 'cloud' }
+  - { group: 'CursorLineNr', guifg: 'white_bright', guibg: 'background' }
+  - { group: 'Directory', guifg: 'cyan' }
+  - { group: 'Error', guifg: 'red_bright', gui: 'bold' }
   - { group: 'ErrorMsg', guifg: 'red', guibg: 'cloud' }
   - { group: 'FoldColumn', guibg: 'grape' }
   - { group: 'Folded', guifg: 'cloud', guibg: 'grape' }
-  - { group: 'LineNr', guifg: 'black_bright', guibg: 'cloud' }
+  - { group: 'LineNr', guifg: 'black_bright', guibg: 'background' }
   - { group: 'MatchParen', guifg: 'cloud', guibg: 'magenta' }
   - { group: 'ModeMsg', guifg: 'cloud', guibg: 'green' }
-  - { group: 'Pmenu', guifg: 'coal', guibg: 'rain_cloud' }
-  - { group: 'PmenuSel', guifg: 'white', guibg: 'cream' }
-  - { group: 'PmenuSbar', guibg: 'cloud' }
-  - { group: 'Search', guibg: 'cream', gui: 'underline' }
-  - { group: 'SignColumn', guibg: 'cloud' }
-  - { group: 'Title', guifg: 'magenta', gui: 'bold' }
+  - { group: 'Pmenu', guifg: 'swamplime', guibg: 'background' }
+  - { group: 'PmenuSel', guifg: 'truewhite', guibg: 'cream' }
+  - { group: 'PmenuSbar', guibg: 'background' }
+  - { group: 'Search', guifg: 'black', guibg: 'green' }
+  - { group: 'SignColumn', guibg: 'background' }
+  - { group: 'Title', guifg: 'red_bright', gui: 'bold' }
   - { group: 'Todo', guifg: 'yellow', guibg: 'cream' }
   - { group: 'VertSplit', guifg: 'cloud', guibg: 'cloud' }
-  - { group: 'Visual', guifg: 'black', guibg: 'cream' }
+  - { group: 'Visual', guifg: 'black', guibg: 'yellow' }
   - { group: 'WarningMsg', guifg: 'red', guibg: 'snow' }
   - { group: 'Access', guifg: 'white_bright', gui: 'bold' }
-  - { group: 'Comment', guifg: 'grape', gui: 'italic' }
+  - { group: 'Comment', guifg: 'storm_cloud', gui: 'italic' }
+  - { group: 'NonText', guifg: 'storm_cloud' }
   - { group: 'Class', guifg: 'magenta', gui: 'italic' }
-  - { group: 'Conditional', guifg: 'blue' }
+  - { group: 'Conditional', guifg: 'cyan_bright' }
   - { group: 'Constant', guifg: 'white', gui: 'bold' }
-  - { group: 'Delimiter', guifg: 'navy' }
-  - { group: 'Function', guifg: 'black' }
+  - { group: 'Delimiter', guifg: 'green' }
+  - { group: 'Function', guifg: 'blue' }
   - { group: 'Identifier', guifg: 'white' }
   - { group: 'Module', guifg: 'magenta', gui: 'underline' }
-  - { group: 'NonText', guifg: 'rain_cloud' }
   - { group: 'Number', guifg: 'magenta_bright' }
-  - { group: 'PreProc', guifg: 'navy' }
-  - { group: 'Statement', guifg: 'magenta' }
+  - { group: 'PreProc', guifg: 'red_bright' }
+  - { group: 'Statement', guifg: 'cyan_bright' }
   - { group: 'Special', guifg: 'red' }
   - { group: 'SpecialKey', guifg: 'yellow' }
-  - { group: 'String', guifg: 'blueberry' }
+  - { group: 'String', guifg: 'magenta' }
   - { group: 'StorageClass', guifg: 'midnight', gui: 'bold' }
   - { group: 'Structure', guifg: 'white_bright' }
   - { group: 'Symbol', guifg: 'yellow' }
-  - { group: 'Type', guifg: 'black' }
+  - { group: 'Type', guifg: 'yellow' }
   - { group: 'Underlined', guifg: 'black_bright', gui: 'underline' }
   - { group: 'StatusLine', guifg: 'swamplime', guibg: 'ui_bg' }
   - { group: 'StatusLineNC', guifg: 'storm_cloud', guibg: 'snow' }
