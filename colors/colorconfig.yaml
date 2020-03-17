@@ -1,7 +1,7 @@
 colors:
-  raspberry: '#f41f68'
-  snow: '#ffffff'
-  cloud: '#fbfbfb'
+  raspberry: '#ff99c0'
+  snow: '#000000'
+  cloud: '#3e3e3e'
   rain_cloud: '#e8e8e8'
   storm_cloud: '#6b6b6b'
   coal: '#000000'
@@ -9,87 +9,96 @@ colors:
   blueberry: '#736ee9'
   navy: '#402d99'
   mint: '#36ba75'
-  cream: '#fff2dd'
+  cream: '#3b3687'
   midnight: '#5b5194'
   pink: '#f682f1'
   pink_light: '#ffe0f5'
   violet: '#e695ff'
-  black: '#692fd5'
-  black_bright: '#a4b6da'
-  red: '#e22b75'
-  red_bright: '#fc9494'
-  green: '#01c8ba'
-  green_bright: '#74efa9'
-  yellow: '#ff2f6f'
-  yellow_bright: '#ffca66'
-  blue: '#2199ff'
-  blue_bright: '#7daaff'
-  magenta: '#fd28a2'
-  magenta_bright: '#ff88e9'
-  cyan: '#a489fc'
-  cyan_bright: '#88e7e0'
-  white: '#002bcf'
-  white_bright: '#9b61e8'
-  ui_bg: '#e7e5ff'
+  black: '#000000'
+  black_bright: '#6494ff'
+  red: '#f2cce3'
+  red_bright: '#f27cc5'
+  green: '#c8ffc3'
+  green_bright: '#aa33d3'
+  yellow: '#f3f6c4'
+  yellow_bright: '#cfd08c'
+  blue: '#abe0ff'
+  blue_bright: '#8bccd0'
+  magenta: '#bbb8ff'
+  magenta_bright: '#8e84ff'
+  cyan: '#b4ecde'
+  cyan_bright: '#409192'
+  white: '#9aa2a4'
+  white_bright: '#daffff'
+  ui_bg: '#4a4a4a'
+  background: '#332f36'
+  foreground: '#e6f3ff'
   filepath: '#161464'
   gitadd: '#84edb8'
   gitchange: '#d9b0fc'
   gitdelete: '#f79c7e'
   gitchangedelete: '#87c7ed'
+  swamplime: '#98c9a9'
+  tabfillfg: '#9d88ae'
+  tabfillbg: '#3e3e3e'
+  tabselbg: '#cba0ff'
+  tabselfg: '#000000'
+  truewhite: '#ffffff'
 
 colorgroups:
-  - { group: 'Normal', guifg: 'coal', guibg: 'cloud' }
-  - { group: 'Darker', guifg: 'coal', guibg: 'rain_cloud' }
-  - { group: 'ColorColumn', guifg: 'snow', guibg: 'ui_bg' }
+  - { group: 'Normal', guifg: 'foreground', guibg: 'background' }
+  - { group: 'Darker', guifg: 'foreground', guibg: 'background' }
+  - { group: 'ColorColumn', guifg: 'swamplime', guibg: 'ui_bg' }
   - { group: 'Conceal', guifg: 'yellow_bright', gui: 'bold' }
   - { group: 'Cursor', guifg: 'black', guibg: 'ui_bg' }
-  - { group: 'CursorLine', guifg: 'black', guibg: 'cream' }
-  - { group: 'CursorLineNr', guifg: 'white_bright', guibg: 'cloud' }
-  - { group: 'Directory', guifg: 'navy', guibg: 'cloud' }
-  - { group: 'Error', guifg: 'red', guibg: 'cloud' }
+  - { group: 'CursorLine', guifg: 'truewhite', guibg: 'cream', gui: 'bold' }
+  - { group: 'CursorLineNr', guifg: 'white_bright', guibg: 'background' }
+  - { group: 'Directory', guifg: 'cyan' }
+  - { group: 'Error', guifg: 'red_bright', gui: 'bold' }
   - { group: 'ErrorMsg', guifg: 'red', guibg: 'cloud' }
   - { group: 'FoldColumn', guibg: 'grape' }
   - { group: 'Folded', guifg: 'cloud', guibg: 'grape' }
-  - { group: 'LineNr', guifg: 'black_bright', guibg: 'cloud' }
+  - { group: 'LineNr', guifg: 'black_bright', guibg: 'background' }
   - { group: 'MatchParen', guifg: 'cloud', guibg: 'magenta' }
   - { group: 'ModeMsg', guifg: 'cloud', guibg: 'green' }
-  - { group: 'Pmenu', guifg: 'coal', guibg: 'rain_cloud' }
-  - { group: 'PmenuSel', guifg: 'white', guibg: 'cream' }
-  - { group: 'PmenuSbar', guibg: 'cloud' }
-  - { group: 'Search', guibg: 'cream', gui: 'underline' }
-  - { group: 'SignColumn', guibg: 'cloud' }
-  - { group: 'Title', guifg: 'magenta', gui: 'bold' }
+  - { group: 'Pmenu', guifg: 'swamplime', guibg: 'background' }
+  - { group: 'PmenuSel', guifg: 'truewhite', guibg: 'cream' }
+  - { group: 'PmenuSbar', guibg: 'background' }
+  - { group: 'Search', guifg: 'black', guibg: 'green' }
+  - { group: 'SignColumn', guibg: 'background' }
+  - { group: 'Title', guifg: 'red_bright', gui: 'bold' }
   - { group: 'Todo', guifg: 'yellow', guibg: 'cream' }
   - { group: 'VertSplit', guifg: 'cloud', guibg: 'cloud' }
-  - { group: 'Visual', guifg: 'black', guibg: 'cream' }
+  - { group: 'Visual', guifg: 'black', guibg: 'yellow' }
   - { group: 'WarningMsg', guifg: 'red', guibg: 'snow' }
   - { group: 'Access', guifg: 'white_bright', gui: 'bold' }
-  - { group: 'Comment', guifg: 'black_bright', gui: 'italic' }
+  - { group: 'Comment', guifg: 'storm_cloud', gui: 'italic' }
+  - { group: 'NonText', guifg: 'storm_cloud' }
   - { group: 'Class', guifg: 'magenta', gui: 'italic' }
-  - { group: 'Conditional', guifg: 'blue' }
+  - { group: 'Conditional', guifg: 'cyan_bright' }
   - { group: 'Constant', guifg: 'white', gui: 'bold' }
-  - { group: 'Delimiter', guifg: 'navy' }
-  - { group: 'Function', guifg: 'black' }
+  - { group: 'Delimiter', guifg: 'green' }
+  - { group: 'Function', guifg: 'blue' }
   - { group: 'Identifier', guifg: 'white' }
   - { group: 'Module', guifg: 'magenta', gui: 'underline' }
-  - { group: 'NonText', guifg: 'rain_cloud' }
   - { group: 'Number', guifg: 'magenta_bright' }
-  - { group: 'PreProc', guifg: 'navy' }
-  - { group: 'Statement', guifg: 'magenta' }
+  - { group: 'PreProc', guifg: 'red_bright' }
+  - { group: 'Statement', guifg: 'cyan_bright' }
   - { group: 'Special', guifg: 'red' }
   - { group: 'SpecialKey', guifg: 'yellow' }
-  - { group: 'String', guifg: 'blueberry' }
+  - { group: 'String', guifg: 'magenta' }
   - { group: 'StorageClass', guifg: 'midnight', gui: 'bold' }
   - { group: 'Structure', guifg: 'white_bright' }
   - { group: 'Symbol', guifg: 'yellow' }
-  - { group: 'Type', guifg: 'black' }
+  - { group: 'Type', guifg: 'yellow' }
   - { group: 'Underlined', guifg: 'black_bright', gui: 'underline' }
-  - { group: 'StatusLine', guifg: 'storm_cloud', guibg: 'ui_bg' }
+  - { group: 'StatusLine', guifg: 'swamplime', guibg: 'ui_bg' }
   - { group: 'StatusLineNC', guifg: 'storm_cloud', guibg: 'snow' }
-  - { group: 'TabLineFill', guifg: 'blueberry', guibg: 'snow' }
-  - { group: 'TabLineSel', guifg: 'snow', guibg: 'violet', gui: 'bold' }
-  - { group: 'TabLineAltShade', guifg: 'ui_bg', guibg: 'snow' }
-  - { group: 'User1', guifg: 'black', guibg: 'ui_bg' }
+  - { group: 'TabLine', guifg: 'tabfillfg', guibg: 'tabfillbg' }
+  - { group: 'TabLineFill', guifg: 'tabfillbg', guibg: 'ui_bg' }
+  - { group: 'TabLineSel', guifg: 'tabselfg', guibg: 'tabselbg', gui: 'bold' }
+  - { group: 'TabLineAltShade', guifg: 'tabfillbg', guibg: 'tabselfg' }
+  - { group: 'User1', guifg: 'magenta', guibg: 'ui_bg' }
   - { group: 'User2', guifg: 'snow', guibg: 'ui_bg' }
   - { group: 'User3', guifg: 'mint', guibg: 'ui_bg' }
   - { group: 'User4', guifg: 'black_bright', guibg: 'ui_bg' }

@@ -3,18 +3,6 @@ set showbreak=↪
 set fillchars=vert:│,fold:─
 set listchars=tab:\▏\ ,extends:⟫,precedes:⟪,nbsp:␣,trail:·
 
-" Tabline {{{
-" ---------------------------------------------------------
-" TabLineFill: Tab pages line, where there are no labels
-hi TabLineFill ctermfg=230 ctermbg=128 guifg=#736ee9 guibg=#ffffff cterm=NONE gui=NONE
-" TabLine: Not-active tab page label
-hi TabLine     ctermfg=128 ctermbg=128 guifg=#736ee9 guibg=#ffffff cterm=NONE gui=NONE
-" TabLineSel: Active tab page label
-hi TabLineSel  ctermfg=230 ctermbg=128 guifg=#ffffff guibg=#e695ff cterm=NONE gui=NONE
-" Custom
-highlight TabLineAlt       ctermfg=230 ctermbg=128 guifg=#6b6b6b guibg=#e7e5ff
-highlight TabLineAltShade  ctermfg=230 ctermbg=128 guifg=#e7e5ff guibg=#ffffff
-
 " Highlights: Statusline {{{
 highlight StatusLine   ctermfg=15 ctermbg=231 guifg=#6b6b6b guibg=#e7e5ff
 highlight StatusLineNC ctermfg=14 ctermbg=231 guifg=#6b6b6b guibg=#ffffff
