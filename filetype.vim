@@ -30,6 +30,7 @@ augroup filetypedetect "{{{
 
 	autocmd BufNewFile,BufRead *.exs setfiletype elixir
 	autocmd BufNewFile,BufRead *.html setfiletype htmldjango
+	autocmd BufNewFile,BufRead *.njk setfiletype htmldjango
 	autocmd BufNewFile,BufRead *.md setfiletype markdown
 
 augroup END

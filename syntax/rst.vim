@@ -58,7 +58,7 @@ call s:DefineInlineMarkup('InterpretedTextOrHyperlinkReference', '`', '`', '`_\{
 call s:DefineInlineMarkup('InlineLiteral', '``', "", '``')
 call s:DefineInlineMarkup('SubstitutionReference', '|', '|', '|_\{0,2}')
 call s:DefineInlineMarkup('InlineInternalTargets', '_`', '`', '`')
-call s:DefineInlineMarkup('InlineOption', '\:', '\:', '\:')
+call s:DefineInlineMarkup('InlineOption', '\:', '\:`', '\:')
 
 syn match   rstSections "\v^%(([=`:.'"~^_*+#-])\1+\n)?.{1,2}\n([=`:.'"~^_*+#-])\2+$"
 	\ contains=@Spell
@@ -71,6 +71,7 @@ syn match rstSections "\v^(\s+).{2,}\n\1[=`:.'"~^_*+#-]{2,}$"
 let s:alphanum = '[:lower:][:upper:][:digit:]'
 let s:ReferenceName = '['.s:alphanum.']\%([-_.:+]\?['.s:alphanum.']\+\)*'
 " [[:lower:][:upper:][:digit:]]\%([-_.:+]\?[[:lower:][:upper:][:digit:]]\+\)*
+
 
 function! s:DefineRegion(region_dict)
 	let opts = ''
@@ -178,8 +179,8 @@ endfor
 
 syn sync minlines=50 linebreaks=2
 
-hi rstDirective guifg=#e6f3ff
-hi rstExDirective guifg=#e6f3ff
+hi rstDirective guifg=#383838
+hi rstExDirective guifg=#383838
 
 " hi def link rstDirectiveStart Keyword
 hi def link rstExArg Identifier

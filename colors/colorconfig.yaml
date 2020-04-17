@@ -1,61 +1,63 @@
 colors:
-  raspberry: '#ff99c0'
+  raspberry: '#f41f68'
   snow: '#000000'
   cloud: '#3e3e3e'
   rain_cloud: '#e8e8e8'
-  storm_cloud: '#6b6b6b'
+  storm_cloud: '#969696'
   coal: '#000000'
   grape: '#ab60e6'
   blueberry: '#736ee9'
   navy: '#402d99'
   mint: '#36ba75'
-  cream: '#3b3687'
+  cream: '#fff2dd'
   midnight: '#5b5194'
   pink: '#f682f1'
   pink_light: '#ffe0f5'
   violet: '#e695ff'
-  black: '#000000'
-  black_bright: '#6494ff'
-  red: '#f2cce3'
-  red_bright: '#f27cc5'
-  green: '#c8ffc3'
-  green_bright: '#aa33d3'
-  yellow: '#f3f6c4'
-  yellow_bright: '#cfd08c'
-  blue: '#abe0ff'
-  blue_bright: '#8bccd0'
-  magenta: '#bbb8ff'
-  magenta_bright: '#8e84ff'
-  cyan: '#b4ecde'
-  cyan_bright: '#409192'
-  white: '#9aa2a4'
-  white_bright: '#daffff'
-  ui_bg: '#4a4a4a'
-  background: '#332f36'
-  foreground: '#e6f3ff'
+  black: '#692fd5'
+  black_bright: '#6b88bf'
+  red: '#f0023e'
+  red_bright: '#ff7d7d'
+  green: '#00bd87'
+  green_bright: '#38cf7a'
+  yellow: '#ff5c7e'
+  yellow_bright: '#ffca66'
+  blue: '#0062eb'
+  blue_bright: '#7daaff'
+  magenta: '#fd28a2'
+  magenta_bright: '#ff88e9'
+  cyan: '#b72ed9'
+  cyan_bright: '#9102eb'
+  white: '#002bcf'
+  white_bright: '#9b61e8'
+  ui_bg: '#e7e5ff'
+  background: '#fcfcfc'
+  foreground: '#383838'
   filepath: '#161464'
   gitadd: '#84edb8'
   gitchange: '#d9b0fc'
   gitdelete: '#f79c7e'
   gitchangedelete: '#87c7ed'
-  swamplime: '#98c9a9'
-  tabfillfg: '#9d88ae'
-  tabfillbg: '#3e3e3e'
-  tabselbg: '#cba0ff'
-  tabselfg: '#000000'
+  swamplime: '#002bcf'
+  tabfillfg: '#9b61e8'
+  tabfillbg: '#e7e5ff'
+  tabselbg: '#9b61e8'
+  tabselfg: '#ffffff'
   truewhite: '#ffffff'
+  visualbg: '#e3f1ff'
+  search: '#b0f5d7'
 
 colorgroups:
   - { group: 'Normal', guifg: 'foreground', guibg: 'background' }
   - { group: 'Darker', guifg: 'foreground', guibg: 'background' }
   - { group: 'ColorColumn', guifg: 'swamplime', guibg: 'ui_bg' }
   - { group: 'Conceal', guifg: 'yellow_bright', gui: 'bold' }
-  - { group: 'Cursor', guifg: 'black', guibg: 'ui_bg' }
-  - { group: 'CursorLine', guifg: 'truewhite', guibg: 'cream', gui: 'bold' }
-  - { group: 'CursorLineNr', guifg: 'white_bright', guibg: 'background' }
+  - { group: 'Cursor', guifg: 'black_bright', guibg: 'white' }
+  - { group: 'CursorLine', guifg: 'coal', guibg: 'visualbg' }
+  - { group: 'CursorLineNr', guifg: 'magenta', guibg: 'visualbg', gui: 'bold' }
   - { group: 'Directory', guifg: 'cyan' }
-  - { group: 'Error', guifg: 'red_bright', gui: 'bold' }
-  - { group: 'ErrorMsg', guifg: 'red', guibg: 'cloud' }
+  - { group: 'Error', guifg: 'yellow_bright', gui: 'bold' }
+  - { group: 'ErrorMsg', guifg: 'red', guibg: 'storm_cloud' }
   - { group: 'FoldColumn', guibg: 'grape' }
   - { group: 'Folded', guifg: 'cloud', guibg: 'grape' }
   - { group: 'LineNr', guifg: 'black_bright', guibg: 'background' }
@@ -64,12 +66,12 @@ colorgroups:
   - { group: 'Pmenu', guifg: 'swamplime', guibg: 'background' }
   - { group: 'PmenuSel', guifg: 'truewhite', guibg: 'cream' }
   - { group: 'PmenuSbar', guibg: 'background' }
-  - { group: 'Search', guifg: 'black', guibg: 'green' }
+  - { group: 'Search', guifg: 'black', guibg: 'search' }
   - { group: 'SignColumn', guibg: 'background' }
-  - { group: 'Title', guifg: 'red_bright', gui: 'bold' }
+  - { group: 'Title', guifg: 'white', gui: 'bold' }
   - { group: 'Todo', guifg: 'yellow', guibg: 'cream' }
   - { group: 'VertSplit', guifg: 'cloud', guibg: 'cloud' }
-  - { group: 'Visual', guifg: 'black', guibg: 'yellow' }
+  - { group: 'Visual', guifg: 'coal', guibg: 'cream' }
   - { group: 'WarningMsg', guifg: 'red', guibg: 'snow' }
   - { group: 'Access', guifg: 'white_bright', gui: 'bold' }
   - { group: 'Comment', guifg: 'storm_cloud', gui: 'italic' }
@@ -93,13 +95,13 @@ colorgroups:
   - { group: 'Type', guifg: 'yellow' }
   - { group: 'Underlined', guifg: 'black_bright', gui: 'underline' }
   - { group: 'StatusLine', guifg: 'swamplime', guibg: 'ui_bg' }
-  - { group: 'StatusLineNC', guifg: 'storm_cloud', guibg: 'snow' }
+  - { group: 'StatusLineNC', guifg: 'background', guibg: 'background' }
   - { group: 'TabLine', guifg: 'tabfillfg', guibg: 'tabfillbg' }
   - { group: 'TabLineFill', guifg: 'tabfillbg', guibg: 'ui_bg' }
   - { group: 'TabLineSel', guifg: 'tabselfg', guibg: 'tabselbg', gui: 'bold' }
   - { group: 'TabLineAltShade', guifg: 'tabfillbg', guibg: 'tabselfg' }
   - { group: 'User1', guifg: 'magenta', guibg: 'ui_bg' }
-  - { group: 'User2', guifg: 'snow', guibg: 'ui_bg' }
+  - { group: 'User2', guifg: 'background', guibg: 'ui_bg' }
   - { group: 'User3', guifg: 'mint', guibg: 'ui_bg' }
   - { group: 'User4', guifg: 'black_bright', guibg: 'ui_bg' }
   - { group: 'GitGutterAdd', guifg: 'gitadd' }
