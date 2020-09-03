@@ -20,13 +20,22 @@ let g:etc#vim_path =
 let g:etc#cache_path =
 	\ expand(($XDG_CACHE_HOME ? $XDG_CACHE_HOME : '~/.cache').'/vim')
 
-let g:etc#config_paths = get(g:, 'etc#config_paths', [
-	\ 'config/plugins.yaml',
-	\ 'config/local.plugins.yaml',
-	\ 'usr/vimrc.yaml',
-	\ 'usr/vimrc.json',
-	\ 'vimrc.yaml',
-	\ 'vimrc.json',
+let g:etc#config_paths =
+	\ !exists('g:vscode') ?
+	\ get(g:, 'etc#config_paths', [
+	\   'config/plugins.yaml',
+	\   'config/local.plugins.yaml',
+	\   'usr/vimrc.yaml',
+	\   'usr/vimrc.json',
+	\   'vimrc.yaml',
+	\   'vimrc.json',
+	\ ]) :
+	\ get(g:, 'etc#config_paths', [
+	\   'config/vscode.plugins.yaml',
+	\   'usr/vscode.vimrc.yaml',
+	\   'usr/vscode.vimrc.json',
+	\   'vscode.vimrc.yaml',
+	\   'vscode.vimrc.json'
 	\ ])
 
 function! etc#init() abort
